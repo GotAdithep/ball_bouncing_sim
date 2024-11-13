@@ -5,7 +5,7 @@ def draw_ball(color, size, x, y):
     turtle.penup()
     turtle.color(color)
     turtle.fillcolor(color)
-    turtle.goto(x,y)
+    turtle.goto(x,y-size)
     turtle.pendown()
     turtle.begin_fill()
     turtle.circle(size)
@@ -25,8 +25,3 @@ def update_ball_velocity(i, xpos, ypos, vx, vy, canvas_width, canvas_height, bal
     # if the ball hits the ceiling or the floor, reverse the vy velocity
     if abs(ypos[i]) > (canvas_height - ball_radius):
         vy[i] = -vy[i]
-
-
-
-
-
